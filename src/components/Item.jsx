@@ -1,0 +1,14 @@
+export default function Item( {title, img, price, handleClick} ){
+  
+  console.log("Props:", title, img, price)
+
+  return (
+    <div style={{ border: "solid 1px white", borderRadius: "8px", padding: "16px", margin: "12px auto"}}>
+      <h3>{title}</h3>
+      <img width="220" src={img} />
+      <p>$ {price}</p>      
+      <button onClick={handleClick}>Ver producto</button>
+    </div> 
+  )  
+}
+
