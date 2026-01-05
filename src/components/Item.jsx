@@ -1,5 +1,5 @@
-export default function Item( {title, img, price, handleClick} ){
-  
+export default function Item( {title, img, price,} ){
+
   console.log("Props:", title, img, price)
 
   return (
@@ -7,7 +7,7 @@ export default function Item( {title, img, price, handleClick} ){
       <h3>{title}</h3>
       <img width="220" src={img} />
       <p>$ {price}</p>      
-      <button onClick={handleClick}>Ver producto</button>
+      <button>Ver producto</button>
     </div> 
   )  
 }
