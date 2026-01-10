@@ -62,7 +62,7 @@ const products = [
 
         "price": 1200,
 
-        "category": "pc",
+        "category": "intel",
 
         "stock": 5,
 
@@ -80,7 +80,7 @@ const products = [
 
         "price": 1800,
 
-        "category": "pc",
+        "category": "ryzen",
 
         "stock": 3,
 
@@ -98,7 +98,7 @@ const products = [
 
         "price": 300,
 
-        "category": "monitor",
+        "category": "samsung",
 
         "stock": 12,
 
@@ -116,7 +116,7 @@ const products = [
 
         "price": 450,
 
-        "category": "monitor",
+        "category": "lg",
 
         "stock": 7,
 
@@ -134,7 +134,7 @@ const products = [
 
         "price": 900,
 
-        "category": "celular",
+        "category": "samsung",
 
         "stock": 15,
 
@@ -153,7 +153,7 @@ const products = [
 
         "price": 1100,
 
-        "category": "celular",
+        "category": "apple",
 
         "stock": 8,
 
@@ -171,7 +171,7 @@ const products = [
 
         "price": 750,
 
-        "category": "notebook",
+        "category": "lenovo",
 
         "stock": 10,
 
