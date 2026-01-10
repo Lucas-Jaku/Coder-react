@@ -1,6 +1,6 @@
 export default function Item( {title, img, price,} ){
 
-  console.log("Props:", title, img, price)
+  console.log("Ciclo de vida: Montaje")
 
   return (
     <div style={{ border: "solid 1px white", borderRadius: "8px", padding: "16px", margin: "12px auto"}}>

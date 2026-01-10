@@ -1,7 +1,23 @@
 import products from '../data/products';
 import Item from './Item';
+import getData from '../data/mockService';
+
 
 export default function ItemListContainer(props) {
+  
+  console.log("promesa:", getData());
+
+
+  
+
+//async await
+  getData().then( (respuesta) => {
+    console.log("Promesa terminada")
+    console.log(respuesta);
+  }).catch( (error) => {
+    alert(error)
+  })
+
   return (
     <section>
 
@@ -9,9 +25,8 @@ export default function ItemListContainer(props) {
       {
         products.map(
           (item) => <Item
-            title={item.title}
-            img={item.img}
-            price={item.price} />
+            key={item.id}
+            {...item} />
         )
       }
 
