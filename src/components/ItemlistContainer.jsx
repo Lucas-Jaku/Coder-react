@@ -1,22 +1,21 @@
-import products from '../data/products';
 import Item from './Item';
 import getData from '../data/mockService';
+import { useEffect, useState } from 'react';
 
 
 export default function ItemListContainer(props) {
-  
-  console.log("promesa:", getData());
+  const [products, setProducts] = useState([]);
 
+  //async await
+  useEffect(() => {
+    getData().then((respuesta) => {
+      console.log("Promesa terminada")
+      setProducts(respuesta);
+    }).catch((error) => {
+      alert(error)
+    })
+  }, [])
 
-  
-
-//async await
-  getData().then( (respuesta) => {
-    console.log("Promesa terminada")
-    console.log(respuesta);
-  }).catch( (error) => {
-    alert(error)
-  })
 
   return (
     <section>
@@ -26,7 +25,7 @@ export default function ItemListContainer(props) {
         products.map(
           (item) => <Item
             key={item.id}
-            {...item} />
+            {...item} /> // spread
         )
       }
 

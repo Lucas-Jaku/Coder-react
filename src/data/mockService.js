@@ -7,11 +7,12 @@ const miPromise = new Promise ( (resolve,reject) => {
      
 })   
 
+//fetch
 function getData () {
     const PromiseData = new Promise ( (resolve,reject) => { 
     console.log("Solicitando datos a la base de datos")
     //reject("Algo salio mal")
-    setTimeout( () => { resolve(products)}, 1000)
+    setTimeout( () => { resolve(products)}, 1500)
     })
     return PromiseData
 }
