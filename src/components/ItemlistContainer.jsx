@@ -1,5 +1,5 @@
 import Item from './Item';
-import getData, { getCategoryData } from '../data/mockService';
+import { getData, getCategoryData } from '../data/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
@@ -8,6 +8,7 @@ export default function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
 
   const { categoryID } = useParams();
+  console.log(categoryID)
 
   //fetch
   useEffect(() => {
@@ -21,19 +22,18 @@ export default function ItemListContainer(props) {
 
 
 return (
-  <section>
-
-    <h2>Hola, bienvenidos a mi tienda! {props.greeting} </h2>
-    <div className="itemList">
-    {
-      products.map(
-        (item) => <Item
-          key={item.id}
-          {...item} /> // spread
-      )
-    }
-    </div>
-
-  </section>
-)
+    <section className="item-list-container">
+        <h2>Hola, bienvenidos a mi tienda {props.greeting} </h2>
+        <div className="itemlist">
+        {
+          products.map( 
+            (item) => <Item 
+              key={item.id}
+              {...item} // spread
+            />
+          )
+        }       
+        </div>
+    </section>      
+  )
 }

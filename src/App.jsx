@@ -1,44 +1,55 @@
 import './App.css';
 import Navbar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
 import { BrowserRouter, Routes, Route, Link } from 'react-router';
-import IteamDetailContainer from './components/ItemDetailContainer';
+import { CartProvider } from './context/cartContext';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import CartContainer from './components/CartContainer';
+
+
 
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+      <CartProvider>
+        <Navbar />
 
-      <Routes>
+        <Routes>
 
-        <Route
-          path="/"
-          element={<ItemListContainer />}
-        />
+          <Route
+            path="/"
+            element={<ItemListContainer />}
+          />
 
-        <Route
-        path="/category/:categoryID"
-        element={<ItemListContainer />}
-        />
+          <Route
+            path="/category/:categoryID"
+            element={<ItemListContainer />}
+          />
 
-        <Route
-          path="/product/:itemID"
-          element={<IteamDetailContainer />}
-        />
+          <Route
+            path="/product/:itemID"
+            element={<ItemDetailContainer />}
+          />
 
-        <Route
-          path="*"
-          element={
-            <div>
-              <h1>404 - Not Found</h1>
-              <Link to="/">Regresar al home</Link>
-            </div>}
-        />
+          <Route
+            path="/cart"
+            element={<CartContainer />}
+          />
 
-      </Routes>
+          <Route
+            path="*"
+            element={
+              <div>
+                <h1>404 - Not Found</h1>
+                <Link to="/">Regresar al home</Link>
+              </div>}
+          />
+
+        </Routes>
+
+      </CartProvider>
     </BrowserRouter>
   )
 }

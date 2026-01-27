@@ -1,4 +1,4 @@
-import CartWidget from './Cartwidget';
+import CartWidget from './CartWidget';
 import { NavLink } from 'react-router';
 
 export default function NavBar({ }) {
@@ -9,30 +9,54 @@ export default function NavBar({ }) {
       </NavLink>
       <img width="200" src="https://static.vecteezy.com/system/resources/previews/005/696/554/non_2x/digital-world-technology-logo-vector.jpg" alt="" />
 
-      <li>
-        <NavLink to="/category/samsung">Samsung</NavLink>
-      </li>
-      <li>
-        <NavLink to="/category/lg">Lg</NavLink>
-      </li>
-      <li>
-        <NavLink to="/category/lenovo">Lenovo</NavLink>
-      </li>
-      <li>
-        <NavLink to="/category/apple">Apple</NavLink>
-      </li>
-      <li>
-        <NavLink to="/category/ryzen">Ryzen</NavLink>
-      </li>
-      <li>
-        <NavLink to="/category/intel">Intel</NavLink>
-      </li>
-      <li>
-        <NavLink to="/category/hp">Hp</NavLink>
-      </li>
+      <ul>
+        <li>
+          <NavLink to="/category/samsung">Samsung</NavLink>
+        </li>
 
 
-      <button>{CartWidget()}</button>
+
+        <li>
+          <NavLink to="/category/lg">Lg</NavLink>
+        </li>
+
+
+
+        <li>
+          <NavLink to="/category/lenovo">Lenovo</NavLink>
+        </li>
+
+
+
+        <li>
+          <NavLink to="/category/apple">Apple</NavLink>
+        </li>
+
+
+
+        <li>
+          <NavLink to="/category/ryzen">Ryzen</NavLink>
+        </li>
+
+
+
+        <li>
+          <NavLink to="/category/intel">Intel</NavLink>
+        </li>
+
+
+
+        <li>
+          <NavLink to="/category/hp">Hp</NavLink>
+        </li>
+
+      </ul>
+
+
+<div className="cart-container-nav">
+   <CartWidget />
+</div>
+
     </nav>
   )
 }

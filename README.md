@@ -1,16 +1,31 @@
-# React + Vite
+🚀 TECNOWORLD - eCommerce de Tecnología
+Bienvenido a TECNOWORLD, una plataforma de comercio electrónico moderna y escalable desarrollada con React. Este proyecto permite a los usuarios navegar por categorías de hardware, ver detalles de productos en tiempo real y gestionar un carrito de compras integrado con Firebase.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠️ Tecnologías Utilizadas
+Frontend: React.js.
 
-Currently, two official plugins are available:
+Enrutamiento: React Router para una navegación fluida entre categorías y productos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Base de Datos: Firebase Firestore para la persistencia de productos y gestión de órdenes.
 
-## React Compiler
+Estado Global: Context API para la gestión del carrito de compras.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Estilos: CSS3 Moderno con diseño responsivo.
 
-## Expanding the ESLint configuration
+📦 Características Principales
+Catálogo Dinámico: Filtrado de productos por categorías (Samsung, LG, Lenovo, Apple, Ryzen, Intel, HP) directamente desde la URL.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Detalle de Producto: Vista ampliada con descripción, imagen y precio obtenidos de forma asíncrona.
+
+Sistema de Carrito:
+
+Agregar y quitar productos.
+
+Control de cantidades (ItemCount).
+
+Persistencia de datos durante la sesión mediante Context.
+
+Checkout: Generación automática de órdenes de compra en Firestore con validación de datos.
+
+
+Este proyecto fue realizado con fines educativos para el curso de React en Coderhouse.

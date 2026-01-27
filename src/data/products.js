@@ -60,7 +60,7 @@ const products = [
 
         "title": "PC de Escritorio Intel i5",
 
-        "price": 1200,
+        "price": 1300,
 
         "category": "intel",
 
@@ -159,7 +159,7 @@ const products = [
 
         "img": "https://www.megatone.net/images/Articulos/zoom2x/209/MKT6570NOC-1.jpg",
 
-        "description": "Diseño premium, alto rendimiento y excelente ecosistema."
+        "description": "Diseño premium, alto rendimiento y excelente sistema."
 
     },
 
