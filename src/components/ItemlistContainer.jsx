@@ -23,7 +23,7 @@ export default function ItemListContainer(props) {
 
 return (
     <section className="item-list-container">
-        <h2>Hola, bienvenidos a mi tienda {props.greeting} </h2>
+        <h2>Hola, bienvenidos a mi tienda! {props.greeting} </h2>
         <div className="itemlist">
         {
           products.map( 
